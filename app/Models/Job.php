@@ -9,4 +9,11 @@ class Job extends Model
     use HasFactory;
     protected $table = 'job_listings'; // Specify the table name if it's not the plural form of the model name
     protected $fillable = ['title', 'salary']; // Specify the table name if it's not the plural form of the model name
+
+    public function employer () {
+        return $this->belongsTo(Employer::class);
+    }
+    public function tags () {
+        return $this->belongsToMany(Tag::class, foreignPivotKey: 'job_listing_id');
+    }
 }
