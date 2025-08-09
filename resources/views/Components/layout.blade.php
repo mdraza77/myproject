@@ -10,24 +10,13 @@
 </head>
 
 <body class="h-full">
-    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-    <!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-gray-100">
-  <body class="h-full">
-  ```
--->
     <div class="min-h-full">
         <nav class="bg-gray-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="shrink-0">
-                            <img src="{{ asset('img/logo.png') }}"
-                                alt="Your Company" class="size-8" />
+                            <img src="{{ asset('img/logo.png') }}" alt="Your Company" class="size-8" />
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
@@ -58,8 +47,8 @@
                                     class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-gray-800">
                                     <span class="absolute -inset-1.5"></span>
                                     <span class="sr-only">Open user menu</span>
-                                    <img src="{{ asset('storage/my_profile.jpg') }}"
-                                        alt="" class="size-8 rounded-full" />
+                                    <img src="{{ asset('storage/my_profile.jpg') }}" alt=""
+                                        class="size-8 rounded-full" />
                                 </button>
 
                                 <el-menu anchor="bottom end" popover
@@ -109,8 +98,8 @@
                 <div class="border-t border-gray-700 pt-4 pb-3">
                     <div class="flex items-center px-5">
                         <div class="shrink-0">
-                            <img src="{{ asset('storage/my_profile.jpg') }}"
-                                alt="" class="size-10 rounded-full" />
+                            <img src="{{ asset('storage/my_profile.jpg') }}" alt=""
+                                class="size-10 rounded-full" />
                         </div>
                         <div class="ml-3">
                             <div class="text-base/5 font-medium text-white">Md Raza</div>
@@ -143,8 +132,11 @@
         </nav>
 
         <header class="bg-white shadow-sm">
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{$heading}}</h1>
+            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:flex sm:justify-between">
+                <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ $heading }}</h1>
+                <x-button href="/jobs/create">
+                    Create Job
+                </x-button>
             </div>
         </header>
         <main>
